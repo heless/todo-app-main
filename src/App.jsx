@@ -132,7 +132,7 @@ function App() {
                   key={todo.id}
                   todo={todo}
                   onToggle={() => toggleTodo(todo.id)}
-                  handleDelete={() => handleDelete(todo.id)}
+                  handledelete={() => handleDelete(todo.id)}
                 />
               ))}
             </ul>
@@ -142,7 +142,7 @@ function App() {
             <div className='flex justify-between items-center'>
               <span className='cursor-default text-1'>{todos.filter(t => !t.completed).length} items left</span>
 
-              <div className='hidden md:space-x-2 md:flex'>
+              <div className='hidden md:space-x-2 md:p-4 md:flex'>
                 <button onClick={() => setFilter('all')} className={`
                   ${isDarkTheme ? `hover:text-dark-LightGrayishBluehover ${activeColorsAll}` :
                   `${activeColorsAll} hover:text-light-veryDarkGrayishBlue`} 
